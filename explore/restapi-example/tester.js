@@ -184,16 +184,23 @@ function test_put(user_id, new_user_id) {
 
 /// TESTING
 
+// List the users
 test_get();
 
+// Create a new user with id 3
 test_post("{\"user\": 3}");
 
+// List the updated users
 test_get();
 
+// Delete a user with id 3
 test_delete(3);
 
+// List the updated users
 test_get();
 
+// Update user with id 2 to 3
 test_put(2, 3);
 
+// List the updated users
 test_get();
