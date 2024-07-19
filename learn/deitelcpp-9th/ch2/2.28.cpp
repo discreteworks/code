@@ -2,7 +2,7 @@
 #include <cmath>
 
 void split_integer(int num, int size) {
-  long divisor = pow (10, size -1);
+  long divisor = pow (10, size - 1);
   while (num > 0) {
     std::cout << num/ divisor << "   ";
     num %= divisor;
