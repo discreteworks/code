@@ -1,15 +1,23 @@
 #include <iostream>
-using namespace std;
-int main()
-{
-  int n;
-  int factorial = 1;
-  cin >> n;
+#include <cmath>
 
-  for( int i = 0 ; (n - i) >= 1; i++ )
-  {
-    factorial *=  ( n - i );
-
+void split_integer(int num, int size) {
+  long divisor = pow (10, size -1);
+  while (num > 0) {
+    std::cout << num/ divisor << "   ";
+    num %= divisor;
+    divisor /= 10;
   }
-  cout << factorial;
+  std::cout << std::endl;
+}
+
+int main () {
+  int num = 0;
+  int size = 0;
+  std::cout << "Enter number:";
+  std::cin >> num;
+  std::cout << "Enter number size(no of digits):";
+  std::cin >> size;
+  split_integer(num, size);
+  return 0;
 }
