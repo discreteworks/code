@@ -2,17 +2,16 @@
 
 using namespace std;
 
-void separator (int );
+void separator(int);
 
-int main ()
-{
+int main() {
   int val = 4562;
 
   separator(val);
+  return 0;
 }
 
-void separator(int val)
-{
+void separator(int val) {
   int total = 0;
   int factor = 1;
   int temp = val;
@@ -23,26 +22,17 @@ void separator(int val)
    * 4562 by 1000 and similar for 562 is the remainder divide by 100 to get 5
    * till we reach 0.
    */
-
-  while ( 1 )
-  {
+  while (1) {
     val /= 10;
-
-    if ( val <= 0 )
+    if (val <= 0)
       break;
-
     factor *= 10;
   }
   cout << "Factor:" << factor << endl;
-
-  while ( factor > 0 )
-  {
+  while (factor > 0) {
     cout << temp / factor << " ";
-
     temp %= factor;
-
     factor /= 10;
   }
   cout << endl;
-
 }

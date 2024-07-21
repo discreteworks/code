@@ -11,7 +11,7 @@ void split_integer(int num, int size) {
   std::cout << std::endl;
 }
 
-int main () {
+int main() {
   int num = 0;
   int size = 0;
   std::cout << "Enter number:";

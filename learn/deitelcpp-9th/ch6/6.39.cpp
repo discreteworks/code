@@ -2,16 +2,14 @@
 
 using namespace  std;
 
-void towerOfHanoi (int n);  // n is the number if disk  souce is pole 1, destination 3, temporary is pole 2
+void towerOfHanoi(int n);  // n is the number if disk  souce is pole 1, destination 3, temporary is pole 2
 
-int main ()
-{
-  towerOfHanoi (4);
+int main() {
+  towerOfHanoi(4);
   return -1;
 }
 
-void towerOfHanoi (int n)
-{
+void towerOfHanoi(int n) {
   /* tower of hanoi is series based on a pattern similar to a pattern we have in fibnacci series
    * there are two parts in the series lets take an exampe from  recursive outcome.
    * 1 -> 3
@@ -34,13 +32,9 @@ void towerOfHanoi (int n)
   */
   const int OFFSET = 1; //add offset to match 1, 2 and 3 poles
 
-  for ( int i = 1; i < (1 << n); i++ ) // shift 1 by n gives 2^n
-  {
+  for (int i = 1; i < (1 << n); i++) { // shift 1 by n gives 2^n
     int src = (i & (i-1)) % 3 + OFFSET;
-
     int dest = (((i | (i -1)) + 1) % 3) + OFFSET;
-
     cout << ((n % 2 == 0 && src > 1) ? (src == 2 ? 3 : 2) : src) << " -> " << ((n % 2 == 0 && dest > 1) ? (dest == 2 ? 3 : 2) : dest) << endl;
-
   }
 }
