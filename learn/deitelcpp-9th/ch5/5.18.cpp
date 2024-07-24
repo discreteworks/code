@@ -12,11 +12,11 @@ int main() {
   int i  = 1;
   char hex[3];
   cout <<  "Show decimal equivalent 1-256" << endl;
-  cout << "Decimal" << "|" << "Binary" << "|" << "Octal" << "|" <<  "Hexadecimal" << endl;
+  cout << "Decimal" << setw(10) << "Binary" <<  setw(15) << "Octal" <<  setw(15) <<  "Hexadecimal" << endl;
 
   while (i <= 256) {
     toHex(i, hex);
-    cout << i << setw(15) << toBin(i) << setw(15) << toOct(i) << setw(15) <<'|' << hex << endl;
+    cout << i << setw(15) << toBin(i) << setw(15) << toOct(i) << setw(15) << hex << endl;
     i++;
   }
   return 0;

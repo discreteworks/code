@@ -4,7 +4,7 @@ using namespace std;
 
 int main() {
   /* The number of rows is also the number maximum stars in a row. */
-  int n  = 5; // number of rows.
+  int n  = 9; // number of rows.
   int loop1, loop2;
 
   /* loop incremement by offset of 2 (1,3,5,7,9)

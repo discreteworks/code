@@ -7,13 +7,15 @@ using namespace std;
 #define SALEMAN_PAY 200
 
 int main() {
-  double sales;
-  double total;
+  double sales = -1;
+  double total = 0;
 
+  cout << "Enter sales[-1 to exit]:";
   cin >> sales;
   while(sales != -1) {
     total = SALEMAN_PAY + sales * COMMISSION;
-    cout << "Sales is :"<< "$" << fixed << setprecision(2) <<  total << endl;
+    cout << "Salesman commission:"<< "$" << fixed << setprecision(2) <<  total << endl;
+    cout << "Enter sales[-1 to exit]:";
     cin >> sales;
   }
   return  0;
