@@ -15,9 +15,9 @@ int main() {
   }
   cout << total << endl;
   if (total == number) {
-    cout << "Number is palendrome" << endl;
+    cout << "Number is palindrome" << endl;
   } else {
-    cout << "Not palendrome." << endl;
+    cout << "Not palindrome." << endl;
   }
   return 0;
 }

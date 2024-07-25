@@ -20,15 +20,12 @@ int main() {
       number1 /= i;
       number2 /= i;
       total *=  i;
-      cout << "if1 i: " << i << endl;
     } else if ( 0 == number1 % i) {
       number1 /= i;
       total *=  i;
-      cout << "if2 i: " << i << endl;
     } else if ( 0 == number2 % i) {
       number2 /= i;
       total *=  i;
-      cout << "if3 i: " << i << endl;
     } else {
       i++;
     }
