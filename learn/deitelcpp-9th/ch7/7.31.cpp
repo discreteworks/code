@@ -8,6 +8,7 @@ void stringReverse(string &str, int start);
 int main() {
   string str =  "abcdefgh";
   stringReverse(str, 0);
+  cout << endl;
   return 0;
 }
 

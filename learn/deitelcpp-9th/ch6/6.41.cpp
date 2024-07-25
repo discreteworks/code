@@ -5,7 +5,14 @@ using namespace std;
 int gcd(int x, int y);
 
 int main() {
-  cout << gcd(10,5) << endl;
+  int input1;
+  int input2;
+
+  cout << "Input number 1:";
+  cin >> input1;
+  cout << "Input number 2:";
+  cin >> input2;
+  cout << "GCD:" << gcd(input1, input2) << endl;
   return 0;
 }
 

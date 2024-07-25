@@ -7,7 +7,7 @@ int recursiveMinimum(array<int, 10> &arr, int start, int end);
 
 int main() {
   array < int, 10 > arr =  { 26, 14, 15, 23, 32, 10, 13, 11, 10, 8 };
-  cout << recursiveMinimum(arr, 0, 9) << endl;
+  cout << "Minimum:" << recursiveMinimum(arr, 0, 9) << endl;
   return 0;
 }
 

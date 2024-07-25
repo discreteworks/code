@@ -1,0 +1,12 @@
+cmake_minimum_required (VERSION 3.20)
+project (cmake-binaries)
+include_directories(include)
+file( GLOB SRCS src/*.cpp)
+
+foreach(SRC ${SRCS})
+  get_filename_component(FILENAME ${SRC} NAME)
+  string(REGEX MATCH "^(.*)\\.[^.]*$" dummy ${FILENAME})
+  set(BIN ${CMAKE_MATCH_1})
+  add_executable (${BIN} ${SRC})
+  message(STATUS "SRC=${SRC}")
+endforeach()

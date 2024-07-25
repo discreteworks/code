@@ -11,22 +11,20 @@ int main() {
   const double commission = 0.09;
 
   array<int, size> counter = {0};
-  cout << "Total Sales : ";
+  cout << "Input sales[-1 to exit]:";
   cin >> totalSales;
   while (totalSales != -1) {
     totalSalary = 200 +  totalSales * commission;
-    cout << totalSalary << endl;
+    cout << "Salesman commission:" << totalSalary << endl;
     if  (totalSalary >= 1000 ) {
       counter[8]++;
-      //cout << counter[8] << " 1" << endl;
     }
     for (int i = 0; i < 8 ; i++) {
       if (totalSalary >= (i + 2) * 100 && totalSalary < (i + 3) * 100) {
         counter[i]++;
-        //cout << counter[i] << " 2" << endl;
       }
     }
-    cout << "Total Sales : ";
+    cout << "Input sales[-1 to exit]:";
     cin >> totalSales;
   }
   for (int i = 0; i < 9; i++) {
